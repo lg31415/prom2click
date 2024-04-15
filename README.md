@@ -78,7 +78,7 @@ Usage of ./bin/prom2click:
             ENGINE = GraphiteMergeTree(
                   date, (name, tags, ts), 8192, 'graphite_rollup'
             );
-        ```
+        ```1
     * For a more resiliant setup you could setup shards, replicas and a distributed table
         * setup a Zookeeper cluster (or zetcd)
         * eg. for each clickhouse shard run two+ clickhouse servers and setup a ReplicatedGraphiteMergeTree on each with the same zk path and uniq replicas (eg. replace {replica} with the servers fqdn)
